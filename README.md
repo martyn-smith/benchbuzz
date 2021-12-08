@@ -50,9 +50,9 @@ Results
 Conclusions
 ---
 
-A Naive implementation in an interpreted languages will probably get you around 12 MiB/s. Less than a morning's worth of work and a language change will get you 10x that, but then, unless you're writing your entire system in the more performant language, you'd still be dealing with problems enterprise devs hate - managing interop between different languages. Depends on your shop.
+A naive implementation in an interpreted language will probably get you around 12 MiB/s. Less than a morning's worth of work and a language change will get you 10x that, but then, unless you're writing your entire system in the more performant language, you'd still be dealing with problems enterprise devs hate - managing interop between different languages. Depends on your shop.
 
-Julia is *really* slow, and this implementation also locks out my terminal - no idea.
+Julia is *really* slow, and this implementation also locks out my terminal. Particularly odd in a performance-focused language - I assume I've used *some* sort of footgun somewhere.
 
 It shouldn't be surprising that, in a test like this, the syscalls to stdout will matter more than the integer arithmetic. Even so, I'm surprised how little Python's infamously slow integer arithmetic matters. Although PyPy does speed things up considerably.
 
